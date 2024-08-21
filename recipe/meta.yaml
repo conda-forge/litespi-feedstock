@@ -1,6 +1,6 @@
 {% set name = "litespi" %}
-{% set version = "2023.12" %}
-{% set sha256 = "264666700b6a32e7b7cc9fac31c3f22ede47203267788b19ccae5f4e488153ce" %}
+{% set version = "2024.04" %}
+{% set sha256 = "ec0afd648f7f3de29d639b93aac7c0d5dcfc066321b7292d911af1b54f958339" %}
 
 package:
   name: {{ name|lower }}
@@ -24,8 +24,8 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - litex >=2023.08
-    - liteiclink >=2023.08
+    - litex >=2024.04
+    - liteiclink >=2024.04
     - migen
     - packaging
     - pyyaml
