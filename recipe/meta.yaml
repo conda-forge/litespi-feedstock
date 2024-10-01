@@ -1,6 +1,6 @@
 {% set name = "litespi" %}
-{% set version = "2024.04" %}
-{% set sha256 = "ec0afd648f7f3de29d639b93aac7c0d5dcfc066321b7292d911af1b54f958339" %}
+{% set version = "2024.08" %}
+{% set sha256 = "03e386809bc9ca1ca11f64a5a88efcae62b2e00dff0ff8ed21d12cacd536e990" %}
 
 package:
   name: {{ name|lower }}
@@ -22,10 +22,11 @@ requirements:
   host:
     - python >=3.7
     - pip
+    - setuptools
   run:
     - python >=3.7
-    - litex >=2024.04
-    - liteiclink >=2024.04
+    - litex ~={{ version }}*
+    - liteiclink ~={{ version }}*
     - migen
     - packaging
     - pyyaml
