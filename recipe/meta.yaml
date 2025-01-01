@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
   entry_points:
@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - litex ~={{ version }}*
     - liteiclink ~={{ version }}*
     - migen
@@ -32,6 +32,8 @@ requirements:
     - pyyaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - litespi
   commands:
