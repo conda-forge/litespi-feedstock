@@ -1,6 +1,6 @@
 {% set name = "litespi" %}
-{% set version = "2024.08" %}
-{% set sha256 = "03e386809bc9ca1ca11f64a5a88efcae62b2e00dff0ff8ed21d12cacd536e990" %}
+{% set version = "2024.12" %}
+{% set sha256 = "906461c89bb3e1b36775416e6211486e6b969204161c89126ec01c37a7d6dce8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
   entry_points:
