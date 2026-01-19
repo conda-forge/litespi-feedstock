@@ -1,6 +1,6 @@
 {% set name = "litespi" %}
-{% set version = "2025.08" %}
-{% set sha256 = "a718296b748e10b78cd85f4d83b242c50cd2cae4be3c8a4398efd3b3a99e6971" %}
+{% set version = "2025.12" %}
+{% set sha256 = "ece1f9e1a3b67f95673c62d4cd98540df03b50148e7cfb2dc6ae31640d2c857f" %}
 
 package:
   name: {{ name|lower }}
