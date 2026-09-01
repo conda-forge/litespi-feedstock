@@ -12,7 +12,6 @@ package:
 source:
   url: https://github.com/litex-hub/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
   sha256: ${{ sha256 }}
-  file_name: ${{ version }}.tar.gz
 
 build:
   number: 1
@@ -24,13 +23,13 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
     - python >=${{ python_min }}
-    - litex ~=${{ version }}*
-    - liteiclink ~=${{ version }}*
+    - litex ~=${{ version }}
+    - liteiclink ~=${{ version }}
     - migen
     - packaging
     - pyyaml
@@ -45,7 +44,7 @@ tests:
         - "*"
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - litespi_gen --help
 
